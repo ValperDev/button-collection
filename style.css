@@ -1,7 +1,10 @@
 .button-list {
     display: grid;
-    gap: 1em;
+    gap: 2em;
     grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    padding: 2em;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 .button {
@@ -75,4 +78,29 @@
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
+}
+
+/* Button 3 */
+.button3 {
+    border-radius: 50px;
+    background-color: #111;
+    color: #f7f7f7;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.button3:hover svg {
+    animation: animate 500ms infinite alternate;
+    -webkit-animation: animate 500ms infinite alternate;
+}
+
+@keyframes animate {
+    to {
+        transform: translateX(75%);
+        -webkit-transform: translateX(75%);
+        -moz-transform: translateX(75%);
+        -ms-transform: translateX(75%);
+        -o-transform: translateX(75%);
+    }
 }
