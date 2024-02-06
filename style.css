@@ -7,16 +7,17 @@
 .button {
     cursor: pointer;
     font-size: 1.2em;
+    font-weight: 600;
     padding: 1.2em 2.4em;
 }
 
+/* Button1 */
 .button1 {
     border: 0;
     border-radius: 10px;
     box-shadow: 8px 8px 0px #000;
     background-color: #3f70d4;
     color: #f7f7f7;
-    font-weight: 700;
     transition: box-shadow 150ms ease-in-out;
     -webkit-transition: box-shadow 150ms ease-in-out;
     -moz-transition: box-shadow 150ms ease-in-out;
@@ -26,4 +27,52 @@
 
 .button1:hover {
     box-shadow: unset;
+}
+
+/* Button2 */
+.button2 {
+    border: 2px solid #111;
+    background-color: #ccc;
+    color: #111;
+    position: relative;
+    overflow: hidden;
+    transition: color 150ms ease-in-out;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    -moz-transition: color 150ms ease-in-out;
+    -ms-transition: color 150ms ease-in-out;
+    -o-transition: color 150ms ease-in-out;
+}
+
+.button2::before {
+    content: "";
+    position: absolute;
+    background-color: #111;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: transform 150ms ease-in-out;
+    -webkit-transition: transform 150ms ease-in-out;
+    -moz-transition: transform 150ms ease-in-out;
+    -ms-transition: transform 150ms ease-in-out;
+    -o-transition: transform 150ms ease-in-out;
+}
+
+.button2:hover {
+    color: #ccc;
+}
+
+.button2:hover::before {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
